@@ -8,6 +8,7 @@
   <div id="counter">0</div>
   <button onClick="countup()">UP</button>
   <button onClick="countdown()">DOWN</button>
+  <span id="lifewasted"></span>
 </body>
 </html>
 
@@ -23,10 +24,16 @@ function countdown(){
   counter--
   setCounter()
 }
-
   
 function setCounter(){
-    document.getElementById("counter").innerText = counter
+  document.getElementById("counter").innerText = counter
+  lifeWasted()
+}
+  
+function lifeWasted(){
+  if(counter >= 100){
+    document.getElementById("lifewasted").innerText = "congratulations on wasting your life pressing buttons"
+  }
 }
 
 
