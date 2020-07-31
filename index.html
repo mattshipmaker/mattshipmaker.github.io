@@ -7,6 +7,8 @@
   
   <head>  
     <title>Matt Shipmaker</title>
+   
+    <script src="counter.js"></script>
   </head>
   
   <body>
@@ -18,33 +20,3 @@
     </div>
   </body>
 </html>
-
-<script>
-var counter = 0;
-  
-document.addEventListener('DOMContentLoaded', function() {
-});
-
-function countup(){
-  counter++
-  setCounter()
-}
-  
-function countdown(){
-  counter--
-  setCounter()
-}
-  
-function setCounter(){
-  document.getElementById("counter").innerText = counter
-  lifeWasted()
-}
-  
-function lifeWasted(){
-  if(counter >= 100){
-    document.getElementById("lifewasted").innerText = "congratulations on wasting your life pressing buttons"
-  }
-}
-
-
-</script>
