@@ -3,14 +3,11 @@
 </style>
 
 <html>
-<head> Page </head>
+<head> Button Clicker </head>
 <body>
-
-<div id="counter">0</div>
-
-<button onClick="countup()">UP</button>
-
-
+  <div id="counter">0</div>
+  <button onClick="countup()">UP</button>
+  <button onClick="countdown()">DOWN</button>
 </body>
 </html>
 
@@ -19,11 +16,18 @@ var counter = 0;
 
 function countup(){
   counter++
-  var element = document.getElementById("counter")
-  element.innerText = counter
-
+  setCounter()
+}
+  
+function countdown(){
+  counter--
+  setCounter()
 }
 
+  
+function setCounter(){
+    document.getElementById("counter").innerText = counter
+}
 
 
 </script>
