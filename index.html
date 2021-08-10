@@ -67,9 +67,12 @@
 
     function runStockQuote() {
         if (run) {
-            $.ajax(settings).done(function (response) {
-                $("#stockPrice").text(response.quoteResponse.result[0].bid)
-            });
+            $.ajax(settings)
+                .done(function (response) {
+                    $("#stockPrice").text(response.quoteResponse.result[0].bid)
+                }).fail(function () {
+                    $("#stockPrice").text("failed to get quote")
+                })
         }
     }
 </script>
