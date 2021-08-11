@@ -23,6 +23,8 @@ function runStockQuote() {
                 $("#stockPrice").text(response.quoteResponse.result[0].bid)
             }).fail(function () {
                 $("#stockPrice").text("failed to get quote")
+            }).always(function(){
+                run = false
             })
     }
 }
